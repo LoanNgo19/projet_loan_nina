@@ -148,4 +148,8 @@ Je peux maintenant te faire l’une de ces 3 options :
 2. un cahier des charges complet,
 3. la structure de l’application et les écrans à concevoir.
 
+### Planning V1
+
+Le planning prévisionnel de la V1, avec les durées, dépendances, jalons et livrables, est disponible dans le [Gantt V1](docs/GANTT_V1.md).
+
 Si tu veux, je peux aussi te préparer directement une version “fiche signalétique + backlog de fonctionnalités” prête à présenter à un client ou à un développeur.
