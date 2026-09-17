@@ -152,4 +152,6 @@ Je peux maintenant te faire l’une de ces 3 options :
 
 Le planning prévisionnel de la V1, avec les durées, dépendances, jalons et livrables, est disponible dans le [Gantt V1](docs/GANTT_V1.md).
 
+Le cahier des charges fonctionnel de la V1 est disponible dans le [cahier des charges V1](docs/CAHIER_DES_CHARGES_V1.md).
+
 Si tu veux, je peux aussi te préparer directement une version “fiche signalétique + backlog de fonctionnalités” prête à présenter à un client ou à un développeur.
