@@ -142,11 +142,92 @@ Pour une première version, on peut utiliser :
 ### 13) Description courte du projet
 “Une application qui aide les utilisateurs à organiser leurs voyages de vacances, suivre leur budget, gérer leurs réservations, leurs documents, leurs activités et leurs souvenirs dans un seul espace simple et pratique.”
 
-### 14) Prochaine étape
+### 14) Diagrammes UML de cas d’utilisation
+
+#### 14.1 Version de l’agent
+
+```mermaid
+flowchart LR
+    subgraph Système["VoyagePlanner / VacancesManager"]
+        A1["Préparer un voyage"]
+        A2["Suivre le budget du voyage"]
+        A3["Gérer les réservations"]
+        A4["Gérer les documents du voyage"]
+        A5["Planifier les activités et l’itinéraire"]
+        A6["Préparer la checklist de départ"]
+        A7["Consulter et partager le journal de voyage"]
+    end
+
+    U["Voyageur"]
+    G["Co-voyageur / Groupe"]
+    AD["Administrateur système"]
+
+    U --> A1
+    U --> A2
+    U --> A3
+    U --> A4
+    U --> A5
+    U --> A6
+    U --> A7
+
+    G --> A1
+    G --> A2
+    G --> A3
+    G --> A4
+    G --> A7
+
+    AD --> A1
+    AD --> A2
+    AD --> A3
+```
+
+#### 14.2 Version corrigée par le groupe
+
+```mermaid
+flowchart LR
+    subgraph Système["VoyagePlanner / VacancesManager"]
+        C1["Créer et gérer un voyage"]
+        C2["Définir et suivre le budget"]
+        C3["Gérer les réservations"]
+        C4["Gérer les documents du voyage"]
+        C5["Planifier les activités et l’itinéraire"]
+        C6["Valider la checklist avant départ"]
+        C7["Consulter le journal de voyage"]
+    end
+
+    V["Voyageur"]
+    CG["Co-voyageur / groupe"]
+
+    V --> C1
+    V --> C2
+    V --> C3
+    V --> C4
+    V --> C5
+    V --> C6
+    V --> C7
+
+    CG --> C1
+    CG --> C2
+    CG --> C3
+    CG --> C4
+    CG --> C7
+
+    C2 -. include .-> C2a["Saisir une dépense"]
+    C6 -. include .-> C6a["Vérifier les documents"]
+    C6 -. include .-> C6b["Vérifier les réservations"]
+```
+
+#### 14.3 Commentaire sur les relations
+- La relation include est utilisée uniquement quand elle apporte une information fonctionnelle réelle.
+- Exemple : "Valider la checklist avant départ" inclut la vérification des documents et des réservations.
+- Exemple : "Définir et suivre le budget" inclut la saisie d’une dépense.
+- Les relations extend et généralisation ne sont pas ajoutées car elles n’apportent pas d’information utile pour la V1 du projet.
+
+### 15) Prochaine étape
 Je peux maintenant te faire l’une de ces 3 options :
 1. une version plus professionnelle de la fiche signalétique,
 2. un cahier des charges complet,
-3. la structure de l’application et les écrans à concevoir.
+3. la structure de l’applications et les écrans à concevoir.
 
 ### Planning V1
 
